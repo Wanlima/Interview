@@ -76,7 +76,11 @@ WARNING: ThreadSanitizer: data race (pid=23326)
 SUMMARY: ThreadSanitizer: data race (/Users/Passion/Library/Developer/CoreSimulator/Devices/75D62ECF-1AB0-41B6-8DD8-C502EB57428F/data/Containers/Bundle/Application/5E14BA51-A7A4-4944-BABC-E18D737E74E1/OCTest.app/OCTest:x86_64+0x100002715) 
 ==================
 ````
->由于`num1`不是原子性，有可能导致两个线程同时访问`setter`方法，有可能对`_num1`变量同时释放两次。这种类型的问题可以用Xcode的 [Thread Sanitizer](https://developer.apple.com/videos/play/wwdc2016/412) 线程检查工具检查出来，Xcode称这类问题为Data Race，字面意思就是`数据竞争`.
+
+日志信息说明的很清楚了，出现了 `Data Race` 问题，字面意思就是`数据竞争`，由于`num1`不是原子性，有可能导致多个线程同时访问`setter`方法，从而导致`_num1`变量被释放多次。
+
+`Data Race`的问题非常难查，`Data Race`一旦发生，结果是不可预期的，也许直接就`Crash`了，也许导致执行流程错乱了，也许把内存破坏导致之后某个时刻突然`Crash`了。我们可以借助Xcode的 [Thread Sanitizer](https://developer.apple.com/videos/play/wwdc2016/412) 线程检查工具 和 `Analyze` 静态分析来检查这种问题。
+
 
 接下来我们把属性修改为`atomic`，再多运行几次：
 
@@ -151,3 +155,8 @@ SUMMARY: ThreadSanitizer: data race (/Users/Passion/Library/Developer/CoreSimula
 ````
 这个时候日志打印的结果就是20000。我们通过对`test`对象加锁，加大锁的粒度，这样就可以保证数据的安全了。
 
+**参考：**
+
+[WWDC 2016 Session 412](https://developer.apple.com/videos/play/wwdc2016/412/)
+
+[如何避免数据竞争(Data race)](https://www.jianshu.com/p/0084b625fa23)
