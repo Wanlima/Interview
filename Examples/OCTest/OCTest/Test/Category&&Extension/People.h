@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface People : NSObject
 
+@property (nonatomic, assign) NSString *name;
+
+@property (nonatomic, weak) NSString *delegate;
+
 @end
 
 NS_ASSUME_NONNULL_END

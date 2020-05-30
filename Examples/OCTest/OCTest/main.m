@@ -17,9 +17,5 @@ int main(int argc, char * argv[]) {
         appDelegateClassName = NSStringFromClass([AppDelegate class]);
     }
 
-    People * p = [People new];
-    p.name = @"汪万里";
-    printf(p.name);
-
     return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }

@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "ThreadSafeTest.h"
 
 @interface ViewController ()
+
 
 @end
 
@@ -16,7 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [ThreadSafeTest nonatomicTest];
+    
+//    [ThreadSafeTest atomicTest];
 }
 
 
