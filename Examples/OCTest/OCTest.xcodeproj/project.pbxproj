@@ -17,6 +17,7 @@
 		5386F00F245700BD00687321 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 5386F00E245700BD00687321 /* People.m */; };
 		5386F013245700EE00687321 /* People+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5386F012245700EE00687321 /* People+Category.m */; };
 		5386F0172457017700687321 /* NSObject+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 5386F0162457017700687321 /* NSObject+Category.m */; };
+		9139B08424AF1226005F94CE /* MultiThreadTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 9139B08324AF1226005F94CE /* MultiThreadTest.m */; };
 		91D47D0224822E94008FA223 /* ThreadSafeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 91D47D0124822E94008FA223 /* ThreadSafeTest.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		5386F0142457010A00687321 /* NSObject+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
 		5386F0152457017700687321 /* NSObject+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Category.h"; sourceTree = "<group>"; };
 		5386F0162457017700687321 /* NSObject+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Category.m"; sourceTree = "<group>"; };
+		9139B08224AF1226005F94CE /* MultiThreadTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MultiThreadTest.h; sourceTree = "<group>"; };
+		9139B08324AF1226005F94CE /* MultiThreadTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MultiThreadTest.m; sourceTree = "<group>"; };
 		91D47D0024822E94008FA223 /* ThreadSafeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreadSafeTest.h; sourceTree = "<group>"; };
 		91D47D0124822E94008FA223 /* ThreadSafeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreadSafeTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +123,8 @@
 			children = (
 				91D47D0024822E94008FA223 /* ThreadSafeTest.h */,
 				91D47D0124822E94008FA223 /* ThreadSafeTest.m */,
+				9139B08224AF1226005F94CE /* MultiThreadTest.h */,
+				9139B08324AF1226005F94CE /* MultiThreadTest.m */,
 			);
 			path = Thread;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				5386F00F245700BD00687321 /* People.m in Sources */,
 				5386F0052457006300687321 /* main.m in Sources */,
 				5386F013245700EE00687321 /* People+Category.m in Sources */,
+				9139B08424AF1226005F94CE /* MultiThreadTest.m in Sources */,
 				5386EFF72457006200687321 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

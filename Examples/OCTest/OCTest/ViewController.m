@@ -18,11 +18,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [ThreadSafeTest nonatomicTest];
-    
-//    [ThreadSafeTest atomicTest];
 }
-
 
 @end
