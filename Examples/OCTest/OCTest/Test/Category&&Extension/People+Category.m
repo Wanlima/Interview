@@ -10,4 +10,12 @@
 
 @implementation People (Category)
 
+//- (void)setSname:(NSString *)sname {
+//
+//}
+//
+//- (NSString *)sname {
+//    return @"";
+//}
+
 @end

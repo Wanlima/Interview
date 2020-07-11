@@ -10,4 +10,8 @@
 
 @implementation People
 
+- (NSString *)name {
+    return _name;
+}
+
 @end
