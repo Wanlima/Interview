@@ -38,6 +38,10 @@
     NSLog(@"class: %@ p: %p", [str3 class], str3);
 
     NSLog(@"class: %@ p: %p", [str4 class], str4);
+
+    People *p = [[People alloc] init];
+    [p run];
+    id __weak weakObj = p;
 }
 
 @end

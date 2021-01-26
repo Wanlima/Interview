@@ -14,4 +14,8 @@
     return _name;
 }
 
+- (void)run {
+    NSLog(@"Run~");
+}
+
 @end
